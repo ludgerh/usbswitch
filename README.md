@@ -35,7 +35,7 @@ python3 -m venv env
 source env/bin/activate  
 pip install --upgrade pip  
 pip install pyusb  
-echo "SUBSYSTEM=='usb', ATTRS{idVendor}=='0d50', ATTRS{idProduct}=='0008', MODE='0666'" | sudo tee /etc/udev/rules.d/60-usbswitch.rules  
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0d50", ATTRS{idProduct}=="0008", MODE="0666"' | sudo tee /etc/udev/rules.d/60-usbswitch.rules  
 replug the USB connection...  
 
 Cooking receipt for running to tool:  
